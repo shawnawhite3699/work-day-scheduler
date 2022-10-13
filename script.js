@@ -18,7 +18,34 @@ function timeblockColor() {
         } else {
             $(this).addClass("future");
         }
+
+        //if (currentHour < hour) {
+            //$(this).removeClass("future");
+            //$(this).removeClass("present");
+            //$(this).addClass("past");
+       //}
+        //else if (currentHour === hour) {
+            //$(this).removeClass("past");
+            //$(this).removeClass("future");
+            //$(this).addClass("present");
+        //}
+        //else {
+            //$(this).removeClass("present");
+            //$(this).removeClass("past");
+            //$(this).addClass("future");
+        //}
     })
 };
 
 timeblockColor ();
+
+//WHEN I click the save button for that timeblock
+//THEN the text for that event is saved in local storage
+$(document).ready(function () {
+    $(".saveBtn").on("click", function () {
+        var event = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
+
+        localStorage.setItem(time, event);
+    });
+});
