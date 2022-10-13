@@ -21,6 +21,11 @@ textarea {
   border-bottom: 10px solid black;
 }
 
+.currentDay {
+  color: #06aed5;
+  font-size: 1.25rem;
+}
+
 .description {
   white-space: pre-wrap;
 }
