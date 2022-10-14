@@ -32,6 +32,7 @@ function timeBlockColor() {
 };
 
 timeBlockColor();
+var timeInterval = setInterval(timeBlockColor, 1000);//interval not working
 
 //WHEN I refresh the page
 //THEN the saved events persist
